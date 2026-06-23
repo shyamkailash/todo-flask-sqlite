@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: white;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 55px 18px;
+}
+
+.todo-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 850px;
+  padding: 36px;
+  border-radius: 30px;
+  background: rgba(15, 23, 42, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.16);
+  color: #7dd3fc;
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  color: #cbd5e1;
+}
+
+.task-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 16px 18px;
+  border-radius: 16px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 16px;
+}
+
+.task-form input::placeholder {
+  color: #94a3b8;
+}
+
+.task-form button,
+.complete-btn,
+.delete-btn {
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 14px;
+  transition: 0.2s ease;
+}
+
+.task-form button:hover,
+.complete-btn:hover,
+.delete-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.task-form button {
+  padding: 0 24px;
+  color: white;
+  background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.section-title h2 {
+  font-size: 24px;
+}
+
+.section-title span {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.task-item h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.done-text {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pending {
+  background: rgba(250, 204, 21, 0.15);
+  color: #fde047;
+}
+
+.completed {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.complete-btn {
+  padding: 10px 14px;
+  background: #22c55e;
+  color: white;
+}
+
+.delete-btn {
+  padding: 10px 14px;
+  background: #ef4444;
+  color: white;
+}
+
+.empty-message {
+  text-align: center;
+  color: #94a3b8;
+  padding: 32px 0;
+}
+
+@media (max-width: 650px) {
+  .todo-card {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+
+  .task-form button {
+    padding: 15px;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .complete-btn,
+  .delete-btn {
+    flex: 1;
+  }
+}

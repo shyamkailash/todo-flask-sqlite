@@ -1,6 +1,10 @@
+.venv/
 __pycache__/
 *.pyc
 todo.db
-.venv/
-env/
 .env
+requirements.txt~
+frontend/node_modules/
+frontend/dist/frontend/node_modules/
+frontend/dist/
+requirements.txt~
